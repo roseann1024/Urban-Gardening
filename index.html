@@ -51,6 +51,15 @@
             text-decoration: none;
         }
 
+        .nav-links a:hover {
+            padding: 8px;
+            border-radius: 4px;
+            font-style: italic;
+            background-color: #508400;
+            color: white;
+            font-weight: 700;
+        }
+
         .burger {
             display: none;
             cursor: pointer;
@@ -72,21 +81,46 @@
             background-size: cover;
             color: white;
             text-align: center;
-            padding: 200px 0;
+            padding: 130px 0;
         }
 
         .header-text {
-            padding: 20px 10px;
+            padding: 30px 10px;
             background: white;
             opacity: 0.8;
             width: 50%;
             display: block;
             margin: 0 auto;
-            color: #65993F;
+            color: #508400;
             border-radius: 12px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            line-height: 2;
+
+        }
+
+        .header-text h3 {
             letter-spacing: 5px;
         }
 
+        .header-text h1 {
+            font-weight: 900;
+        }
+
+        .header-text h2 {
+            font-family: "Dancing Script";
+            margin-bottom: 40px;
+        }
+
+        .header-text a {
+            padding: 10px;
+            background-color: #508400;
+            opacity: .8;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            line-height: 2;
+            letter-spacing: 2px;
+        }
 
         @media screen and (max-width:768px) {
 
@@ -114,6 +148,7 @@
 
 
 
+
             }
 
             .nav-links li {
@@ -121,16 +156,24 @@
 
             }
 
-            a {
+            .nav-links a {
                 color: white !important;
             }
+
+            .nav-links a:hover {
+                color: #508400 !important;
+                background-color: white;
+                font-style: italic;
+                font-weight: 700;
+            }
+
 
             .burger {
                 display: block;
             }
 
             header {
-                padding: 120px 0;
+                padding: 60px 0;
             }
 
         }
@@ -195,7 +238,7 @@
         <div class="header-text">
             <h3>.URBAN GARDENING.</h3>
             <h1>CityLeafy</h1>
-            <h2>Cultivate Your Cityscape</h2>
+            <h2>"Cultivate Your Cityscape"</h2>
             <a href="#more" title="About">Learn more</a>
         </div>
     </header>
