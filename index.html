@@ -37,7 +37,7 @@
         .nav-bar .logo a {
             color: #65993F !important;
             font-weight: 900;
-            font-size: 34px;
+            font-size: 28px;
             text-decoration: underline;
 
         }
@@ -207,56 +207,22 @@
 
         @media screen and (max-width:768px) {
 
-            body {
-                overflow-x: hidden;
+            .nav-bar .logo a {
+                font-weight: 700;
+                font-size: 20px;
+
+            }
+
+            .nav-links {
+                width: 70%;
+                align-items: right;
+                margin: 0;
+                padding: 0;
+                font-size: 12px;
             }
 
             .header-text {
                 width: 80%;
-            }
-
-            .nav-bar {
-                display: flex;
-                justify-content: space-between;
-            }
-
-            .nav-links {
-                position: absolute;
-                right: 0px;
-                height: 100vh;
-                top: 12vh;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-color: #65993F;
-                width: 20%;
-                transform: translateX(100%);
-                transition: transform 0.5s ease-in;
-
-
-
-
-            }
-
-            .nav-links li {
-                opacity: 0;
-
-            }
-
-            .nav-links a {
-                color: white !important;
-            }
-
-            .nav-links a:hover {
-                color: #508400 !important;
-                background-color: white;
-                font-style: italic;
-                font-weight: 700;
-            }
-
-
-            .burger {
-                display: block;
             }
 
             header {
@@ -266,40 +232,6 @@
             .carousel {
                 width: 100%;
             }
-
-
-
-        }
-
-        .nav-active {
-            transform: translateX(0%);
-        }
-
-
-
-
-        @keyframes navLinkFade {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0px);
-            }
-        }
-
-        .toggle .line1 {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-
-        .toggle .line2 {
-            opacity: 0;
-        }
-
-        .toggle .line3 {
-            transform: rotate(45deg) translate(-5px, -6px);
         }
     </style>
 
@@ -314,18 +246,12 @@
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
 
-        </div>
+
     </div>
-
     <header>
         <div class="header-text">
             <h3>.URBAN GARDENING.</h3>
@@ -335,14 +261,15 @@
         </div>
     </header>
 
-    <section id="about">
+
+    <section>
         <div class="row p-4">
             <div class="col-md-6 text-center">
                 <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/123/767/original/pexels-bertellifotografia-15291260.jpg?1713575673"
                     alt="img-plant" width="300" class="img-fluid rounded">
             </div>
 
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center" id="about">
                 <h1 class="pt-3 pb-2">About <span class="cityleafy">CityLeafy🍀</span></h1>
                 <div>Welcome to <span class="cityleafy">CityLeafy</span>, your ultimate destination for urban gardening
                     inspiration, education, and
@@ -444,7 +371,7 @@
 
     </section>
 
-    <section class="p-3">
+    <section class="p-3" id="services">
         <h1 class="text-center">What We Offer</h1>
         <ul>
             <li> <strong>Expert Advice:</strong> Our team of seasoned gardeners and horticulture enthusiasts curate
@@ -466,7 +393,7 @@
         </ul>
     </section>
 
-    <section class="section-2 p-3 mt-2" id="services">
+    <section class="section-2 p-3 mt-2">
         <h1 class="text-center pb-2">Why Choose <span class="cityleafy">CityLeafy?</span></h1>
         <ul>
             <li><strong>Passion for Gardening:</strong> We are passionate about gardening and believe in its power to
@@ -506,32 +433,7 @@
 
 
     <script>
-        const navSlide = () => {
-            const burger = document.querySelector('.burger');
-            const nav = document.querySelector('.nav-links');
-            const navLinks = document.querySelectorAll('.nav-links li');
 
-
-            burger.addEventListener('click', () => {
-                nav.classList.toggle('nav-active');
-
-                navLinks.forEach((link, index) => {
-                    if (link.style.animation) {
-                        link.style.animation = '';
-                    } else {
-                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-
-                    }
-
-
-                });
-
-                burger.classList.toggle('toggle');
-            });
-
-        }
-
-        navSlide();
     </script>
 
 </body>
