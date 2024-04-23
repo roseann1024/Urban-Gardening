@@ -30,7 +30,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            padding: 10px;
+
 
         }
 
@@ -205,6 +205,20 @@
             font-style: italic;
         }
 
+
+
+        .btn-call-back {
+            background-color: #508400;
+            color: white;
+
+        }
+
+        .btn-call-back:hover {
+            color: #508400;
+            font-weight: 700;
+
+        }
+
         @media screen and (max-width:768px) {
 
             .nav-bar .logo a {
@@ -253,7 +267,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
         </ul>
 
 
@@ -268,14 +282,14 @@
     </header>
 
 
-    <section>
+    <section id="about">
         <div class="row p-4 pt-5">
             <div class="col-md-6 text-center">
                 <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/123/767/original/pexels-bertellifotografia-15291260.jpg?1713575673"
                     alt="img-plant" width="300" class="img-fluid rounded">
             </div>
 
-            <div class="col-md-6 text-center" id="about">
+            <div class="col-md-6 text-center">
                 <h1 class="pt-3 pb-2">About <span class="cityleafy">CityLeafy🍀</span></h1>
                 <div>Welcome to <span class="cityleafy">CityLeafy</span>, your ultimate destination for urban gardening
                     inspiration, education, and
@@ -377,7 +391,7 @@
 
     </section>
 
-    <section class="p-3" id="services">
+    <section class="p-5" id="services">
         <h1 class="text-center">What We Offer</h1>
         <ul>
             <li> <strong>Expert Advice:</strong> Our team of seasoned gardeners and horticulture enthusiasts curate
@@ -431,14 +445,71 @@
             <a href="#" class="contact">Speak with an expert</a>
 
     </section>
-    <section class="section-2 p-5">
-        <h1>We are here to help</h1>
-        <div>Leave us your name and number below and one of our experts will call you back.</div>
+    <section class="section-2 p-5" id="contact">
+
+        <div class="container">
+            <h1>We are here to help
+            </h1>
+            <h5>Leave us your name and number below and one of our experts will call you back.</h5>
+
+
+            <form class="row g-3 pt-3">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Name *</label>
+                    <input type="text" class="form-control" id="inputName" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPhone" class="form-label">Phone eg. 555-555-5555 *</label>
+                    <input type="tel" class="form-control" id="inputPhone" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email *</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputZipcode" class="form-label">Zip code *</label>
+                    <input type="text" class="form-control" id="inputZipCode" required>
+                </div>
+                <div class="col-12 pt-3">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here"
+                            id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Questions / Inquiry</label>
+                    </div>
+
+                </div>
+
+                <div class="col-12 pt-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            I want to receive marketing communications from CityLeafy🍀 (you can change your preferences
+                            at
+                            any time, please allow 14
+                            working days).
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 pt-3">
+                    <button type="submit" class="btn btn-call-back" id="callBackButton">Request a call back</button>
+                </div>
+            </form>
+        </div>
+
     </section>
 
 
 
     <script>
+
+
+        function callBack() {
+            alert("Thank you for reaching out to us! You can expect a call from one of our experts within the next 24 - 48 hours. Have a wonderful day!");
+        }
+
+        let callBackButton = document.querySelector("#callBackButton")
+        callBackButton.addEventListener("click", callBack)
+
 
     </script>
 
