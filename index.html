@@ -464,19 +464,19 @@
             <div id="error_message"></div>
             <form class="row g-3 pt-3" id="myform" onsubmit="return validateForm();">
                 <div class="col-md-6">
-                    <label for="name" class="form-label">Name *</label>
+                    <label class="form-label">Name *</label>
                     <input type="text" class="form-control" id="inputName" required>
                 </div>
                 <div class="col-md-6">
-                    <label for="inputPhone" class="form-label">Phone eg. 555-555-5555 *</label>
+                    <label class="form-label">Phone eg. 555-555-5555 *</label>
                     <input type="tel" class="form-control" id="inputPhone" required>
                 </div>
                 <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Email *</label>
+                    <label class="form-label">Email *</label>
                     <input type="email" class="form-control" id="inputEmail">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputZipcode" class="form-label">Zip code *</label>
+                    <label class="form-label">Zip code *</label>
                     <input type="text" class="form-control" id="inputZipCode" required>
                 </div>
                 <div class="col-12 pt-3">
@@ -510,21 +510,16 @@
 
 
     <script>
-
-
         function validateForm() {
-
             const name = document.getElementById("inputName").value;
             const phone = document.getElementById("inputPhone").value;
             const email = document.getElementById("inputEmail").value;
             const zip = document.getElementById("inputZipCode").value;
 
-
             const errorMessage = document.getElementById("error_message");
-            errorMessage.style.padding = "10px"; // Add padding to error message for better visibility
+            errorMessage.style.padding = "10px";
 
             const errors = [];
-
 
             if (name.length < 4) {
                 errors.push("Please enter a valid name (minimum 4 characters).");
@@ -545,22 +540,22 @@
             if (errors.length > 0) {
                 errorMessage.innerHTML = errors.join("<br>");
                 return false;
-            } else {
 
+            } else {
                 alert(`Thank you ${name} for reaching out to us! You can expect a call from one of our experts within the next 24 - 48 hours. Have a wonderful day!`);
                 window.location.reload();
                 return true;
             }
-
-
-            document.addEventListener("DOMContentLoaded", function () {
-                const form = document.getElementById("myform");
-
-                form.addEventListener("submit", function (event) {
-                    event.preventDefault();
-                });
-            });
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("myform");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent form submission to allow validation
+
+            });
+        });
     </script>
 
 </body>
