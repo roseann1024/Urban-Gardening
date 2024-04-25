@@ -451,7 +451,7 @@
                 Together, let's
                 cultivate a
                 greener, more sustainable future, one garden at a time.</div>
-            <a href="#" class="contact">Speak with an expert</a>
+            <a href="#contact" class="contact">Speak with an expert</a>
 
     </section>
     <section class="section-2 p-5" id="contact">
@@ -461,9 +461,7 @@
             </h1>
             <h5>Leave us your name and number below and one of our experts will call you back.</h5>
 
-            <div id="error_message">
-
-            </div>
+            <div id="error_message"></div>
             <form class="row g-3 pt-3" id="myform" onsubmit="return validateForm();">
                 <div class="col-md-6">
                     <label for="name" class="form-label">Name *</label>
@@ -513,72 +511,21 @@
 
     <script>
 
-        /*
-                function validate() {
-                    let name =
-                        document.getElementById("inputName").value;
-        
-                    let phone =
-                        document.getElementById("inputPhone").value;
-                    let email =
-                        document.getElementById("inputEmail").value;
-                    let zip =
-                        document.getElementById("inputZipCode").value;
-                    let error_message =
-                        document.getElementById("error_message");
-        
-                    error_message.style.padding = "10px";
-        
-                    let errors = [];
-        
-                    if (name.length < 4) {
-                        errors.push("Please Enter a valid Name");
-                    }
-        
-        
-                    if (isNaN(phone) || phone.length != 10) {
-                        errors.push("Please Enter a valid Phone Number");
-                    }
-                    if (email.indexOf("@") == -1 || email.length < 6) {
-                        errors.push(
-                            "Please Enter a valid Email");
-                    }
-                    if (zip.length < 5) {
-                        errors.push(
-                            "Please Enter a valid Zip Code");
-                    }
-        
-                    if (errors.length > 0) {
-                        error_message.innerHTML =
-                            errors.join("<br>");
-                        return false;
-                    }
-                    else {
-                        alert(
-                            `Thank you ${name} for reaching out to us! You can expect a call from one of our experts within the next 24-48 hours. Have a wonderful day!`);
-        
-                        return true;
-                    }
-                 
-        
-                 }
-        */
 
         function validateForm() {
-            // Retrieve form input values
+
             const name = document.getElementById("inputName").value;
             const phone = document.getElementById("inputPhone").value;
             const email = document.getElementById("inputEmail").value;
             const zip = document.getElementById("inputZipCode").value;
 
-            // Retrieve error message element
+
             const errorMessage = document.getElementById("error_message");
             errorMessage.style.padding = "10px"; // Add padding to error message for better visibility
 
-            // Array to store error messages
             const errors = [];
 
-            // Validation checks
+
             if (name.length < 4) {
                 errors.push("Please enter a valid name (minimum 4 characters).");
             }
@@ -595,20 +542,25 @@
                 errors.push("Please enter a valid zip code (minimum 5 characters).");
             }
 
-            // Display error messages if any
             if (errors.length > 0) {
-                errorMessage.innerHTML = errors.join("<br>"); // Format error messages with line breaks
-                return false; // Prevent form submission
+                errorMessage.innerHTML = errors.join("<br>");
+                return false;
             } else {
-                // Success message and page refresh
-                alert("Thank you for reaching out to us! You can expect a call from one of our experts within the next 24-48 hours. Have a wonderful day!");
-                window.location.href = window.location.href; // Refresh the page
-                return true; // Allow form submission
+
+                alert(`Thank you ${name} for reaching out to us! You can expect a call from one of our experts within the next 24 - 48 hours. Have a wonderful day!`);
+                window.location.reload();
+                return true;
             }
+
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.getElementById("myform");
+
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
+                });
+            });
         }
-
-
-
     </script>
 
 </body>
