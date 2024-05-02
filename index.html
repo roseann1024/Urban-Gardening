@@ -18,20 +18,18 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <title>CityLeafy Official Website</title>
+
     <style>
         * {
             font-family: "Exo";
             padding: 0;
             margin: 0;
-
         }
 
         .nav-bar {
             display: flex;
             justify-content: space-around;
             align-items: center;
-
-
         }
 
         .nav-bar .logo a {
@@ -39,7 +37,6 @@
             font-weight: 900;
             font-size: 28px;
             text-decoration: underline;
-
         }
 
         .nav-links {
@@ -102,7 +99,6 @@
             border-radius: 12px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             line-height: 2;
-
         }
 
         .header-text h3 {
@@ -205,18 +201,14 @@
             font-style: italic;
         }
 
-
-
         .btn-call-back {
             background-color: #508400;
             color: white;
-
         }
 
         .btn-call-back:hover {
             color: #508400;
             font-weight: 700;
-
         }
 
         #error_message {
@@ -267,7 +259,6 @@
 </head>
 
 <body>
-
     <div class="nav-bar fixed-top bg-body-tertiary ">
         <div class="logo">
             <a href="#"> CityLeafy🍀</a>
@@ -278,8 +269,6 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact Us</a></li>
         </ul>
-
-
     </div>
     <header>
         <div class="header-text">
@@ -289,15 +278,12 @@
             <a href="#about" title="About">Learn more</a>
         </div>
     </header>
-
-
     <section id="about">
         <div class="row p-5 justify-content-center">
             <div class="col-md-4 text-center">
                 <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/123/767/original/pexels-bertellifotografia-15291260.jpg?1713575673"
                     alt="img-plant" width="300" class="img-fluid rounded">
             </div>
-
             <div class="col-md-8 text-center">
                 <h1 class="pt-5 pb-2">About <span class="cityleafy">CityLeafy🍀</span></h1>
                 <div>Welcome to <span class="cityleafy">CityLeafy</span>, your ultimate destination for urban gardening
@@ -317,8 +303,6 @@
                     cultivate their own
                     urban oasis, whether it's on a balcony, rooftop, windowsill, or community plot.
                 </div>
-
-
             </div>
         </div>
     </section>
@@ -384,7 +368,6 @@
                     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/123/766/original/pexels-cottonbro-4503261.jpg?1713572185"
                         class="d-block w-100" alt="...">
                 </div>
-
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">
@@ -397,9 +380,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-
     </section>
-
     <section class="p-5" id="services">
         <h1 class="text-center">What We Offer</h1>
         <ul>
@@ -421,7 +402,6 @@
                 conservation, and organic growing methods, to help create greener, more resilient cities.</li>
         </ul>
     </section>
-
     <section class="section-2 p-5 mt-2">
         <h1 class="text-center pb-2">Why Choose <span class="cityleafy">CityLeafy?</span></h1>
         <ul>
@@ -442,8 +422,6 @@
                 potential of your
                 urban environment.</li>
         </ul>
-
-
     </section>
     <section class="section-3 p-5">
         <h3 class="text-center">Join Us in Cultivating <strong>CityLeafy</strong></h4>
@@ -452,15 +430,12 @@
                 cultivate a
                 greener, more sustainable future, one garden at a time.</div>
             <a href="#contact" class="contact">Speak with an expert</a>
-
     </section>
     <section class="section-2 p-5" id="contact">
-
         <div class="container">
             <h1>We are here to help
             </h1>
             <h5>Leave us your name and number below and one of our experts will call you back.</h5>
-
             <div id="error_message"></div>
             <form class="row g-3 pt-3" id="myform" onsubmit="return validateForm();">
                 <div class="col-md-6">
@@ -485,9 +460,7 @@
                             id="floatingTextarea"></textarea>
                         <label for="floatingTextarea">Questions / Inquiry</label>
                     </div>
-
                 </div>
-
                 <div class="col-12 pt-3">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -515,10 +488,8 @@
             const phone = document.getElementById("inputPhone").value;
             const email = document.getElementById("inputEmail").value;
             const zip = document.getElementById("inputZipCode").value;
-
             const errorMessage = document.getElementById("error_message");
             errorMessage.style.padding = "10px";
-
             const errors = [];
 
             if (name.length < 4) {
